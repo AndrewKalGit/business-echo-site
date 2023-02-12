@@ -17,15 +17,14 @@ function Landing(props) {
             }
         }, 3000);
         return () => clearInterval(intervalID);
-        
     },); 
 return (
 <>
 <section
-  class="relative bg-[url('./Images/matt-botsford-OKLqGsCT8qs-unsplash.jpg')] bg-cover bg-center bg-no-repeat"
+  class="relative bg-[url('./Images/bruno-emmanuelle-dtqlaz4HyHw-unsplash.jpg')] bg-cover bg-center bg-no-repeat"
 >
   <div
-    class="absolute inset-0 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/25 sm:to-black/5"
+    class="absolute bg-transparent bg-gradient-to-r from-white/25 to-white/5 inset-0 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/25 sm:to-white/5"
   ></div>
 
   <div
@@ -37,7 +36,7 @@ return (
         {headingStatement[index]}
         </span>
         <span id="fade-in2">
-        <strong class="block font-extrabold text-indigo-500 sm:text-indigo-700">
+        <strong class="block font-extrabold text-teal-500 sm:text-teal-400">
         Echo Web
         </strong>
         </span>
@@ -47,13 +46,13 @@ return (
         Stand out and make some noise in this digital age. Echo Web provides organizations with digital solutions.
       </p>
 
-      <div class="mt-8 :flex flex-wrap gap-4 text-center hidden">
+      <div class="mt-8 lg:flex flex-wrap gap-4 text-center hidden">
         <Link
         id="fade-in4"
         to="/contact"
-        class="block w-full rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring active:bg-indigo-500 sm:w-auto"
+        class="block w-full rounded bg-teal-600 px-12 py-3 text-md font-semibold text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto"
         >
-         Get Started
+         Consult
         </Link>
       </div>
     </div>
