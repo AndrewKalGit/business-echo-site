@@ -39,11 +39,11 @@ return (
         </span>
       </h1>
 
-      <p id="fade-in3" class="mt-4 max-w-lg hidden md:flex md:text-2xl md:leading-relaxed font-semibold text-white">
+      <p id="fade-in3" class="mt-4 max-w-lg hidden sm:flex md:text-2xl md:leading-relaxed font-semibold text-white">
         Stand out and make some noise in this digital age. Echo Web provides organizations with digital solutions.
       </p>
 
-      <div class="mt-8 lg:flex flex-wrap gap-4 text-center hidden">
+      <div class="mt-8 lg:flex flex-wrap gap-4 text-center">
         <Link
         id="fade-in4"
         to="/contact"
@@ -55,7 +55,7 @@ return (
         id="fade-in4"
         to="/#brochure"
         smooth
-        class="block w-full rounded bg-white px-12 py-3 text-md font-semibold text-teal-400 shadow hover:bg-teal-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-teal-500"
+        class="lg:block w-full rounded bg-white px-12 py-3 text-md font-semibold text-teal-400 shadow hover:bg-teal-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-teal-500 hidden"
         >
          Learn More
         </HashLink>

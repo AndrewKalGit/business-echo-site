@@ -75,7 +75,7 @@ setHidden(false);
         <Link class="text-gray-600 hover:text-gray-400" to="contact">Consult</Link>
       </nav>
 
-     <div class="w-full lg:w-auto items-center lg:justify-end gap-4 flex justify-center lg:flex">
+     <div class="w-full lg:w-auto items-center lg:justify-end gap-4 justify-center hidden lg:flex">
         <Link
           class="px-5 text-lg font-semibold text-teal-500 border border-teal-600 rounded-lg hover:bg-teal-500 hover:text-white focus:outline-none focus:ring active:bg-teal-500 p-2"
           to="consult"
