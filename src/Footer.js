@@ -3,7 +3,7 @@ import React from 'react';
 function Footer(props) {
     return (
 <footer aria-label="Site Footer" class="bg-white">
-  <div class="max-w-screen-xl px-4 pt-16 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-24">
+  <div class="max-w-screen-xl px-4 pt-8 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-16">
     <div class="text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
         Our Expertise 
@@ -17,7 +17,7 @@ function Footer(props) {
         href="/contact"
         class="inline-block px-12 py-3 mt-8 text-sm font-medium text-teal-600 border border-teal-600 rounded-full hover:bg-teal-500 hover:text-white focus:outline-none focus:ring active:bg-teal-500"
       >
-        Get Started
+        Quick Quote
       </a>
     </div>
 

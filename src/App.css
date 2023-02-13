@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(31 41 55);
+  background-color: white;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
   font-size: 0.875rem
@@ -16,7 +16,6 @@
   line-height: 1.25rem
     /* 20px */
   ;
-  opacity: 0.90;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -25,7 +24,7 @@
 }
 
 .Nav-Links-Hambuger {
-  color: white;
+  color: rgb(100, 95, 95);
   font-weight: 700;
   font-size: 18px;
   width: 100%;
@@ -33,7 +32,18 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-right: 40px;
+  padding-right: 18px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+#border-top {
+  border-top-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 #Nav-Overflow {
@@ -43,21 +53,38 @@
   overflow: hidden;
 }
 
+#customHeight {
+  height: 400px;
+}
+
+@media screen and (min-width: 640px) {
+  #customHeight {
+    height: 400px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .Nav-HamburgerContentshow {
     display: none;
   }
 
   #Nav-Overflow {
-    opacity: 0.90;
     position: absolute;
     width: 100%;
     z-index: 10;
     margin: 0;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  #customHeight {
+    height: 625px;
   }
 }
 
+.Nav-Links-Hambuger:active {
+  opacity: 0.75;
+}
+
 .Nav-Links-Hambuger:hover {
-  text-decoration: underline;
+  opacity: 0.75;
 }
