@@ -88,3 +88,8 @@
 .Nav-Links-Hambuger:hover {
   opacity: 0.75;
 }
+
+#canvas {
+  height: 700px;
+  width: 700px;
+}

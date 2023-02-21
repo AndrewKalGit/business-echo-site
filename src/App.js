@@ -6,6 +6,10 @@ import Nav from './Nav';
 import Brochure from './Brochure';
 
 function App() {
+//SEO
+//PPolicy
+//SSL
+//Remove unused npm-prune
   return (
     <>
     <BrowserRouter>

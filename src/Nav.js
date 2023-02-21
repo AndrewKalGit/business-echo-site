@@ -2,9 +2,11 @@ import {React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import OutsideClickHandler from 'react-outside-click-handler';
 import './App.css';
-import Logo from './Images/IMG_1088.png';
+import Logo from './Images/IMG_1088.png'
 
 function Nav(props) {
+
+//Logo get a licensed one 
 
 const [hidden, setHidden] = useState(false);
 
@@ -24,8 +26,7 @@ setHidden(false);
       <div class="flex lg:w-0 lg:flex-1">
         <Link to="/">
           <span class="sr-only">Logo</span>
-          <img class="w-20" src={Logo} alt="Logo"/>
-          <span class="h-10 w-20 rounded-lg bg-white"></span>
+          <img src={Logo} alt="logo" class="w-12 bg-blue-400 rounded-full"/>
         </Link>
       </div>
 
@@ -77,7 +78,7 @@ setHidden(false);
 
      <div class="w-full lg:w-auto items-center lg:justify-end gap-4 justify-center hidden lg:flex">
         <Link
-          class="px-5 text-lg font-semibold text-teal-500 border border-teal-600 rounded-lg hover:bg-teal-500 hover:text-white focus:outline-none focus:ring active:bg-teal-500 p-2"
+          class="px-5 text-lg font-semibold text-blue-500 border border-blue-600 rounded-lg hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500 p-2"
           to="consult"
         >
             Quick Quote

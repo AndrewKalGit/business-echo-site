@@ -2,9 +2,14 @@ import { React, useState, useEffect } from 'react';
 import './Fadein.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import Banner3D from './Banner3D';
 
 function Landing(props) {
-   const headingStatement = ['Make Some Noise', 'Create a Scene', 'Be You'];
+//toDO:
+//resize 3d object for mobile
+//Make a ring that follows the mouse in echo 3d logo
+
+  const headingStatement = ['Make Some Noise', 'Create a Scene', 'Be You'];
 
     const [index, setIndex] = useState(0)
 
@@ -20,34 +25,31 @@ function Landing(props) {
         return () => clearInterval(intervalID);
     },); 
 return (
+
 <>
 <section
-  class="relative bg-gradient-to-r from-teal-300 bg-cover bg-center bg-no-repeat"
+  class="relative bg-gradient-to-r from-blue-300 bg-cover bg-center bg-no-repeat"
 >
   <div
-    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    class="relative flex mx-auto px-4 py-32 sm:px-6 lg:flex justify-center lg:h-screen items-center lg:px-8"
   >
-    <div class="max-w-xl text-center sm:text-left">
+    <div class="text-center">
       <h1 class="text-4xl text-white font-extrabold sm:text-6xl">
         <span id="fade-in">
         {headingStatement[index]}
         </span>
         <span id="fade-in2">
-        <strong class="block font-extrabold text-teal-600 sm:text-teal-600">
+        <strong class="block font-extrabold text-blue-600 sm:text-blue-600">
         Echo Web
         </strong>
         </span>
       </h1>
 
-      <p id="fade-in3" class="mt-4 max-w-lg hidden sm:flex md:text-2xl md:leading-relaxed font-semibold text-white">
-        Stand out and make some noise in this digital age. Echo Web provides organizations with digital solutions.
-      </p>
-
-      <div class="mt-8 lg:flex flex-wrap gap-4 text-center">
+      <div class="mt-8 flex justify-center flex-wrap gap-4 text-center">
         <Link
         id="fade-in4"
         to="/contact"
-        class="block w-full rounded bg-teal-400 px-12 py-3 text-md font-semibold text-white shadow hover:bg-teal-500 focus:outline-none focus:ring active:bg-teal-600 sm:w-auto"
+        class="block w-64 rounded bg-blue-400 px-12 py-3 text-md font-semibold text-white shadow hover:bg-blue-500 focus:outline-none focus:ring active:bg-blue-600 sm:w-auto"
         >
          Quick Quote
         </Link>
@@ -55,15 +57,19 @@ return (
         id="fade-in4"
         to="/#brochure"
         smooth
-        class="lg:block w-full rounded bg-white px-12 py-3 text-md font-semibold text-teal-400 shadow hover:bg-teal-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-teal-500 hidden"
+        class="lg:block w-64 rounded bg-white px-12 py-3 text-md font-semibold text-blue-400 shadow hover:bg-blue-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-blue-500 hidden"
         >
          Learn More
         </HashLink>
       </div>
     </div>
+    <div class="absolute -z-10">
+      <div id="canvas">
+      <Banner3D></Banner3D>
+      </div>
+    </div>
   </div>
 </section>
-
 </>
     );
 }

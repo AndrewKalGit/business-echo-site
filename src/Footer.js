@@ -15,7 +15,7 @@ function Footer(props) {
 
       <a
         href="/contact"
-        class="inline-block px-12 py-3 mt-8 text-sm font-medium text-teal-600 border border-teal-600 rounded-full hover:bg-teal-500 hover:text-white focus:outline-none focus:ring active:bg-teal-500"
+        class="inline-block px-12 py-3 mt-8 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500"
       >
         Quick Quote
       </a>
