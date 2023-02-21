@@ -91,5 +91,12 @@
 
 #canvas {
   height: 700px;
-  width: 700px;
+  width: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+  #canvas {
+    height: 1200px;
+    width: 700px;
+  }
 }

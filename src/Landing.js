@@ -28,18 +28,18 @@ return (
 
 <>
 <section
-  class="relative bg-gradient-to-r from-blue-300 bg-cover bg-center bg-no-repeat"
+  class="relative bg-gradient-to-r from-blue-50 bg-cover bg-center bg-no-repeat"
 >
   <div
     class="relative flex mx-auto px-4 py-32 sm:px-6 lg:flex justify-center lg:h-screen items-center lg:px-8"
   >
     <div class="text-center">
-      <h1 class="text-4xl text-white font-extrabold sm:text-6xl">
+      <h1 class="text-4xl text-gray-700 font-extrabold sm:text-6xl">
         <span id="fade-in">
         {headingStatement[index]}
         </span>
         <span id="fade-in2">
-        <strong class="block font-extrabold text-blue-600 sm:text-blue-600">
+        <strong class="block font-extrabold text-gray-900">
         Echo Web
         </strong>
         </span>
@@ -47,14 +47,14 @@ return (
 
       <div class="mt-8 flex justify-center flex-wrap gap-4 text-center">
         <Link
-        id="fade-in4"
+        id="fade-in1"
         to="/contact"
         class="block w-64 rounded bg-blue-400 px-12 py-3 text-md font-semibold text-white shadow hover:bg-blue-500 focus:outline-none focus:ring active:bg-blue-600 sm:w-auto"
         >
          Quick Quote
         </Link>
         <HashLink
-        id="fade-in4"
+        id="fade-in2"
         to="/#brochure"
         smooth
         class="lg:block w-64 rounded bg-white px-12 py-3 text-md font-semibold text-blue-400 shadow hover:bg-blue-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-blue-500 hidden"
