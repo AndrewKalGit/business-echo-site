@@ -8,18 +8,21 @@ import QuickQuote from './QuickQuote';
 
 function App() {
 //SEO
+  //React Helmet
+  //Proper tags 
+  //SEO validation and check
 //PPolicy
 //SSL
 //Remove unused npm-prune
+//React Production build and "react validation?""
   return (
     <>
     <BrowserRouter>
     <Nav></Nav>
     <Routes>
-    <Route path="/" element={<><Landing></Landing><Brochure></Brochure></>}></Route>
+    <Route path="/" element={<><Landing></Landing><Brochure></Brochure><Footer></Footer></>}></Route>
     <Route path="/consult" element={<><QuickQuote></QuickQuote></>}></Route>
     </Routes>
-    <Footer></Footer>
     </BrowserRouter>
     </>
   );

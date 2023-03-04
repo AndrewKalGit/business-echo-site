@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer(props) {
+function QQFooter(props) {
     return (
 <footer aria-label="Site Footer" class="bg-white border-t border-gray-100">
   <div class="max-w-screen-xl px-4 pt-8 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-16">
@@ -12,13 +12,6 @@ function Footer(props) {
       <p class="max-w-sm mx-auto mt-4 text-gray-500">
         We design and develop a great user experience and interface for your organizational needs.  
       </p>
-
-      <a
-        href="/contact"
-        class="inline-block px-12 py-3 mt-8 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500"
-      >
-        Quick Quote
-      </a>
     </div>
 
     <div
@@ -101,4 +94,4 @@ function Footer(props) {
     );
 }
 
-export default Footer;
+export default QQFooter;
