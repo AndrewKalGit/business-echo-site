@@ -251,7 +251,7 @@ return (
           class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
         >
           <dt class="order-last text-lg font-medium text-gray-500">
-            Development
+            Develop
           </dt>
 
           <dd class="text-lg sm:text-2xl font-extrabold text-blue-500 md:text-4xl">${dev}</dd>
