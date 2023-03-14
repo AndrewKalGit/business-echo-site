@@ -1,15 +1,32 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, useRef } from 'react';
 import './BreadCrumb.css';
 
 //work on this
 
 function QuickQuote(props) {
 
+const threeDimensionalDes = 50;
+const threeDimensionalDesAnimate = 100;
+const twoDimensionalDes = 25;
+const twoDimensionalDesAnimate = 75;
+
+const inputAmount = {
+  product1: 50,
+  product2: 100,
+  product3: 25,
+  product4: 75
+};
+
 const [selectedOptions , setSelectedOptions] = useState({
   step1: { option1: false, option2: false },
-  step2: { option1: false, option2: false },
+  step2: { option1: false, option2: false, option3: false, option4: false,
+  option5: false, option6: false, option7: false, option8: false,
+  option9: false, option10: false,option11: false, option12: false, },
   step3: { option1: false, option2: false }
 })
+
+
+
 const [des, setDes] = useState(0);
 const [dev, setDev] = useState(0);
 const [currentStep, setCurrentStep] = useState(1);
@@ -25,10 +42,6 @@ const prevStep = () => {
   setCurrentStep(currentStep - 1)
   }
 }
-
-const currentStepsColor = (setNumber) => {  
-  setCurrentStep(currentStep);
-};
 
 const handleDevelopmentOption = (stepNumber, optionName, optionPrice) => {
   setSelectedOptions(prevState => ({
@@ -51,6 +64,25 @@ const handleDesignOption = (stepNumber, optionName, optionPrice) => {
   }));
   setDes(prevPrice => prevPrice + (selectedOptions[stepNumber][optionName] ? -optionPrice: optionPrice));
 };
+
+const currentStepsColor = (setNumber) => {  
+  setCurrentStep(setNumber);
+};
+
+// You need better code variable names
+  // setDes is the setTotalDesignQuote
+  // des is the integer: total amount of cost that goes into the des quote
+ function handleNumberInput(event) {
+    const productName = event.target.name;
+    const quantity = Number(event.target.value);
+    const price = inputAmount[productName];
+    const newTotal = des + (price * quantity);
+
+    setDes(newTotal);
+  }
+
+
+
 
 return (
 <>
@@ -86,7 +118,7 @@ return (
           1
         </span>
 
-        <span class="hidden sm:block"> General Information </span>
+        <span class="hidden sm:block cursor-pointer" onClick={() => currentStepsColor(1)} > General Information </span>
       </li>
 
       <li id={currentStep >= 2 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
@@ -96,7 +128,7 @@ return (
           2
         </span>
 
-        <span class="hidden sm:block"> Functionality </span>
+        <span class="hidden sm:block cursor-pointer" onClick={() => currentStepsColor(2)} > Functionality </span>
       </li>
 
       <li id={currentStep >= 3 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
@@ -106,7 +138,7 @@ return (
           3
         </span>
 
-        <span class="hidden sm:block"> Pages </span>
+        <span class="hidden sm:block cursor-pointer" onClick={() => currentStepsColor(3)} > Design </span>
       </li>
     </ol>
   </div>
@@ -122,24 +154,67 @@ return (
       <ul>
         <li id={currentStep === 1 ? 'active' : ''} class='hidden'>
           <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">General Information</h2>
-          <label>
+          <label class=" mt-10 flex justify-center text-xl">
             Option 1 ($10)
             <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 10)} />
           </label>
-          <label>
+          <label class="flex justify-center text-xl">
             Option 2 ($20)
             <input type="checkbox" checked={selectedOptions.step1.option2} onChange={() => handleDevelopmentOption('step1', 'option2', 20)} />
           </label>
         </li>
          <li id={currentStep === 2 ? 'active' : ''} class='hidden'>
           <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">Functionality</h2>
-          <label>
-            Option 1 ($15)
-            <input type="checkbox" checked={selectedOptions.step2.option1} onChange={() => handleDevelopmentOption('step2', 'option1', 15)} />
+          <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            Standard 
+          </h3>
+          <label class="flex justify-start text-xl mt-4 text-gray-800">
+            Contact Form ($100)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step2.option1} onChange={() => handleDevelopmentOption('step2', 'option1', 100)} />
+          </label> 
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Blog Post ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step2.option2} name="input1" onChange={() => handleDevelopmentOption('step2', 'option2', 200)} />
           </label>
-          <label>
-            Option 2 ($25)
-            <input type="checkbox" checked={selectedOptions.step2.option2} onChange={() => handleDevelopmentOption('step2', 'option2', 25)} />
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Live Chat ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step2.option3} name="input2" onChange={() => handleDevelopmentOption('step2', 'option3', 200)} />
+          </label>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Chat Bot ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step2.option4} name="input3" onChange={() => handleDevelopmentOption('step2', 'option4', 200)} />
+          </label>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            CMS ($200) &nbsp;
+            <input type="checkbox" checked={selectedOptions.step2.option5} name="input4" onChange={() => handleDevelopmentOption('step2', 'option5', 200)} /> 
+          </label>
+          <p class="text-gray-700"> <span class="font-extrabold">ⓘ</span> Content Managemenet System: 
+          <br/> Allows you to easily maintain the websites media and text without having to touch the code </p>
+          <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            E-commerce
+          </h3>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Shopping Cart ($500) &nbsp;
+            <input type="checkbox" onChange={() => handleDevelopmentOption('step2', 'option6', 500)} />
+          </label>
+            <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            Designs
+          </h3>
+             <label class="flex justify-start text-xl mt-2 text-gray-800"> 3D web design(s)
+             (${threeDimensionalDes}) &nbsp;
+            <input id="product1" type="number" name="product1" class="w-11 border border-solid border-gray-500 rounded-md" min="0" onChange={handleNumberInput} />
+          </label>
+           <label class="flex justify-start text-xl mt-2 text-gray-800"> 3D web animation(s)
+             (${threeDimensionalDesAnimate}) &nbsp;
+            <input id="product2" type="number" name="product2" class="w-11 border border-solid border-gray-500 rounded-md " min="0"  onChange={handleNumberInput}  />
+          </label>
+           <label class="flex justify-start text-xl mt-2 text-gray-800"> 2D web design(s)
+             (${twoDimensionalDes}) &nbsp;
+               <input id="product3" type="number" name="product3" class="w-11 border border-solid border-gray-500 rounded-md " min="0" onChange={handleNumberInput}  />
+          </label>
+             <label class="flex justify-start text-xl mt-2 text-gray-800"> 2D web animation(s)
+             (${twoDimensionalDesAnimate}) &nbsp;
+            <input id="product4" type="number" name="product4" class="w-11 border border-solid border-gray-500 rounded-md " min="0"  onChange={handleNumberInput}  />
           </label>
         </li>
          <li id={currentStep === 3 ? 'active' : ''} class='hidden'>
@@ -159,7 +234,7 @@ return (
 {/* Prices and Options *END* */}
 
     <div class="mt-8 sm:mt-12">
-      <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <dl class="grid grid-cols-3 gap-4">
         <div
           class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
         >
@@ -167,19 +242,9 @@ return (
             Total
           </dt>
 
-          <dd class="text-4xl font-extrabold text-blue-500 md:text-5xl">
+          <dd class="text-lg sm:text-2xl font-extrabold text-blue-500 md:text-4xl">
             ${des + dev}
           </dd>
-        </div>
-
-        <div
-          class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
-        >
-          <dt class="order-last text-lg font-medium text-gray-500">
-            Design
-          </dt>
-
-          <dd class="text-4xl font-extrabold text-blue-500 md:text-5xl">${des}</dd>
         </div>
 
         <div
@@ -189,18 +254,58 @@ return (
             Development
           </dt>
 
-          <dd class="text-4xl font-extrabold text-blue-500 md:text-5xl">${dev}</dd>
+          <dd class="text-lg sm:text-2xl font-extrabold text-blue-500 md:text-4xl">${dev}</dd>
+        </div>
+
+        <div
+          class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
+        >
+          <dt class="order-last text-lg font-medium text-gray-500">
+            Design
+          </dt>
+
+          <dd class="text-lg sm:text-2xl font-extrabold text-blue-500 md:text-4xl">${des}</dd>
         </div>
       </dl>
     </div>
   </div>
 </div>
-<button onClick={prevStep}>
-  Previous
-</button>
-<button onClick={nextStep}>
-  Next
-</button>
+<div class="flex justify-center gap-1 mb-5">
+  <button
+    class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-200" onClick={prevStep}
+  >
+    <span class="sr-only">Prev Step</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3 w-3"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </button>
+    <button
+    class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-200" onClick={nextStep}
+  >
+    <span class="sr-only">Next Step</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3 w-3"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    </button>
+</div>
 </section>
 </>
     );
