@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import Brochure from './Brochure';
 import QuickQuote from './QuickQuote';
+import Error from './Error';
 
 function App() {
 //SEO
@@ -15,14 +16,17 @@ function App() {
 //SSL
 //Remove unused npm-prune
 //React Production build and "react validation?""
+//ERROR PAGES
   return (
     <>
     <BrowserRouter>
     <Nav></Nav>
     <Routes>
-    <Route path="/" element={<><Landing></Landing><Brochure></Brochure><Footer></Footer></>}></Route>
-    <Route path="/consult" element={<><QuickQuote></QuickQuote></>}></Route>
+    <Route path="/" element={<><Landing></Landing><Brochure></Brochure></>}></Route>
+    <Route path="/quickquote" element={<><QuickQuote></QuickQuote></>}></Route>
+    <Route path="/404" element={<><Error></Error></>}></Route>
     </Routes>
+    <Footer></Footer>
     </BrowserRouter>
     </>
   );

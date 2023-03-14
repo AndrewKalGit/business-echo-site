@@ -98,6 +98,9 @@ body {
   width: 400px;
 }
 
+
+/* MEDIA(S) Queries */
+
 @media screen and (min-width: 1024px) {
   #canvas {
     height: 1200px;

@@ -1,22 +1,43 @@
 import { React, useState, } from 'react';
-import QQFooter from './QQFooter';
+import './BreadCrumb.css';
 
 function QuickQuote(props) {
 
+const [selectedOptions , setSelectedOptions] = useState({
+  step1: { option1: false, option2: false },
+  step2: { option1: false, option2: false },
+  step3: { option1: false, option2: false }
+})
 const [des, setDes] = useState(0);
 const [dev, setDev] = useState(0);
-const [total, setTotal] = useState(0);
+const [currentStep, setCurrentStep] = useState(1);
 
-const currentStepsColor = {
-  backgroundColor: 'rgb(59 130 246)',
-  color: 'rgb(243 244 246)',
-}
 
-const [stepColor, setStepColor] = useState(currentStepsColor)
+const currentStepsColor = (setNumber) => {  
+  setCurrentStep(currentStep);
+};
 
-const nextStep = () => {
-  setStepColor(stepColor);
-}
+const handleDevelopmentOption = (stepNumber, optionName, optionPrice) => {
+  setSelectedOptions(prevState => ({
+    ...prevState,
+    [stepNumber]: {
+      ...prevState[stepNumber],
+      [optionName]: !prevState[stepNumber][optionName] 
+    }
+  }));
+  setDev(prevPrice => prevPrice + (selectedOptions[stepNumber][optionName] ? -optionPrice: optionPrice));
+};
+
+const handleDesignOption = (stepNumber, optionName, optionPrice) => {
+  setSelectedOptions(prevState => ({
+    ...prevState,
+    [stepNumber]: {
+      ...prevState[stepNumber],
+      [optionName]: !prevState[stepNumber][optionName] 
+    }
+  }));
+  setDes(prevPrice => prevPrice + (selectedOptions[stepNumber][optionName] ? -optionPrice: optionPrice));
+};
 
 return (
 <>
@@ -36,7 +57,7 @@ return (
 
 {/* STEPS */}
 
-  <div>
+  <div className="steps">
   <h2 class="sr-only">Steps</h2>
 
   <div
@@ -45,8 +66,8 @@ return (
     <ol
       class="relative z-10 flex justify-between text-sm font-medium text-gray-500"
     >
-      <li class="flex items-center gap-2 bg-white p-2">
-        <span
+      <li id={currentStep >= 1 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
+        <span id={currentStep >= 1 ? 'active' : ''} onClick={() => currentStepsColor(1)} 
           class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6" 
         >
           1
@@ -55,9 +76,9 @@ return (
         <span class="hidden sm:block"> General Information </span>
       </li>
 
-      <li class="flex items-center gap-2 bg-white p-2">
-        <span
-          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6 text-gray-500" 
+      <li id={currentStep >= 2 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
+         <span id={currentStep >= 2 ? 'active' : ''} onClick={() => currentStepsColor(2)} 
+          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6" 
         >
           2
         </span>
@@ -65,9 +86,9 @@ return (
         <span class="hidden sm:block"> Complexity </span>
       </li>
 
-      <li class="flex items-center gap-2 bg-white p-2">
-        <span
-          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+      <li id={currentStep >= 3 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
+     <span id={currentStep >= 3 ? 'active' : ''} onClick={() => currentStepsColor(3)} 
+          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6" 
         >
           3
         </span>
@@ -79,7 +100,50 @@ return (
 </div>
 </div>
 
-{/* STEPS */}
+{/* STEPS *END* */}
+
+
+{/* Prices and Options */}
+
+<div>
+      <ul>
+        <li>
+          <h2>Step 1</h2>
+          <label>
+            Option 1 ($10)
+            <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 10)} />
+          </label>
+          <label>
+            Option 2 ($20)
+            <input type="checkbox" checked={selectedOptions.step1.option2} onChange={() => handleDevelopmentOption('step1', 'option2', 20)} />
+          </label>
+        </li>
+        <li>
+          <h2>Step 2</h2>
+          <label>
+            Option 1 ($15)
+            <input type="checkbox" checked={selectedOptions.step2.option1} onChange={() => handleDevelopmentOption('step2', 'option1', 15)} />
+          </label>
+          <label>
+            Option 2 ($25)
+            <input type="checkbox" checked={selectedOptions.step2.option2} onChange={() => handleDevelopmentOption('step2', 'option2', 25)} />
+          </label>
+        </li>
+        <li>
+          <h2>Step 3</h2>
+          <label>
+            Option 1 ($5)
+            <input type="checkbox" checked={selectedOptions.step3.option1} onChange={() => handleDesignOption('step3', 'option1', 5)} />
+          </label>
+          <label>
+            Option 2 ($10)
+            <input type="checkbox" checked={selectedOptions.step3.option2} onChange={() => handleDesignOption('step3', 'option2', 10)} />
+          </label>
+        </li>
+      </ul>
+    </div>
+
+{/* Prices and Options *END* */}
 
     <div class="mt-8 sm:mt-12">
       <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -91,7 +155,7 @@ return (
           </dt>
 
           <dd class="text-4xl font-extrabold text-blue-500 md:text-5xl">
-            ${total}
+            ${des + dev}
           </dd>
         </div>
 
@@ -119,7 +183,6 @@ return (
   </div>
 </div>
 </section>
-<QQFooter></QQFooter>
 </>
     );
 }

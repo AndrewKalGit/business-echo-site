@@ -48,7 +48,7 @@ return (
       <div class="mt-8 flex justify-center flex-wrap gap-4 text-center">
         <Link
         id="fade-in1"
-        to="/contact"
+        to="/quickquote"
         class="block w-64 rounded bg-blue-400 px-12 py-3 text-md font-semibold text-white shadow hover:bg-blue-500 focus:outline-none focus:ring active:bg-blue-600 sm:w-auto"
         >
          Quick Quote

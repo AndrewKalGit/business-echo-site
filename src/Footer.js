@@ -14,10 +14,10 @@ function Footer(props) {
       </p>
 
       <a
-        href="/contact"
+        href="/consult"
         class="inline-block px-12 py-3 mt-8 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500"
       >
-        Quick Quote
+        Consult
       </a>
     </div>
 
