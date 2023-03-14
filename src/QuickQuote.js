@@ -161,16 +161,67 @@ return (
 
 <div className="prices">
       <ul>
-        <li id={currentStep === 1 ? 'active' : ''} class='hidden'>
-          <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">General Information</h2>
-          <label class=" mt-10 flex justify-center text-xl">
-            Option 1 ($10)
-            <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 10)} />
+          <li id={currentStep === 1 ? 'active' : ''} class='hidden'>
+          <h2 class="flex justify-center text-3xl font-bold text-gray-900 sm:text-4xl mt-6 mb-6">Functionality</h2>
+          <div class="grid grid-cols-3">
+            <div>
+          <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            Standard 
+          </h3>
+          <label class="flex justify-start text-xl mt-4 text-gray-800">
+            Contact Form ($100)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 100)} />
+          </label> 
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Blog Post ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step1.option2} name="input1" onChange={() => handleDevelopmentOption('step1', 'option2', 200)} />
           </label>
-          <label class="flex justify-center text-xl">
-            Option 2 ($20)
-            <input type="checkbox" checked={selectedOptions.step1.option2} onChange={() => handleDevelopmentOption('step1', 'option2', 20)} />
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Live Chat ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step1.option3} name="input2" onChange={() => handleDevelopmentOption('step1', 'option3', 200)} />
           </label>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Chat Bot ($200)&nbsp;
+            <input type="checkbox" checked={selectedOptions.step1.option4} name="input3" onChange={() => handleDevelopmentOption('step1', 'option4', 200)} />
+          </label>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            CMS ($200) &nbsp;
+            <input type="checkbox" checked={selectedOptions.step1.option5} name="input4" onChange={() => handleDevelopmentOption('step1', 'option5', 200)} /> 
+          </label>
+          <p class="text-gray-700"> <span class="font-extrabold">ⓘ</span> Content Managemenet System: 
+          <br/> Allows you to easily maintain the websites media and text without having to touch the code </p>
+          </div>
+          <div>
+          <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            E-commerce
+          </h3>
+          <label class="flex justify-start text-xl mt-2 text-gray-800">
+            Shopping Cart ($500) &nbsp;
+            <input type="checkbox" onChange={() => handleDevelopmentOption('step1', 'option6', 500)} />
+          </label>
+          </div>
+          <div>
+             <h3 class="flex justify-start text-3xl font-bold text-gray-800">
+            Designs
+          </h3>
+             <label class="flex justify-start text-xl mt-2 text-gray-800"> 3D web design(s)
+             (${threeDimensionalDes}) &nbsp;
+            <input id="product1" type="number" name="product1" class="w-11 border border-solid border-gray-500 rounded-md" min="0" onChange={handleNumberInput} />
+          </label>
+           <label class="flex justify-start text-xl mt-2 text-gray-800"> 3D web animation(s)
+             (${threeDimensionalDesAnimate}) &nbsp;
+            <input id="product2" type="number" name="product2" class="w-11 border border-solid border-gray-500 rounded-md " min="0"  onChange={handleNumberInput}  />
+          </label>
+           <label class="flex justify-start text-xl mt-2 text-gray-800"> 2D web design(s)
+             (${twoDimensionalDes}) &nbsp;
+               <input id="product3" type="number" name="product3" class="w-11 border border-solid border-gray-500 rounded-md " min="0" onChange={handleNumberInput}  />
+          </label>
+             <label class="flex justify-start text-xl mt-2 text-gray-800"> 2D web animation(s)
+             (${twoDimensionalDesAnimate}) &nbsp;
+            <input id="product4" type="number" name="product4" class="w-11 border border-solid border-gray-500 rounded-md " min="0"  onChange={handleNumberInput}  />
+          </label>
+          </div>
+             </div>
         </li>
          <li id={currentStep === 2 ? 'active' : ''} class='hidden'>
           <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">Functionality</h2>
