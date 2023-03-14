@@ -163,7 +163,7 @@ return (
       <ul>
           <li id={currentStep === 1 ? 'active' : ''} class='hidden'>
           <h2 class="flex justify-center text-3xl font-bold text-gray-900 sm:text-4xl mt-6 mb-6">Functionality</h2>
-          <div class="grid grid-cols-3">
+          <div class="grid grid-cols-1 sm:grid-cols-3">
             <div>
           <h3 class="flex justify-start text-3xl font-bold text-gray-800">
             Standard 
