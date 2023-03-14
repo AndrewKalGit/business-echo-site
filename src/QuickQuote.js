@@ -1,5 +1,7 @@
-import { React, useState, } from 'react';
+import { React, useState, useEffect } from 'react';
 import './BreadCrumb.css';
+
+//work on this
 
 function QuickQuote(props) {
 
@@ -12,6 +14,17 @@ const [des, setDes] = useState(0);
 const [dev, setDev] = useState(0);
 const [currentStep, setCurrentStep] = useState(1);
 
+const nextStep = () => {
+  if (currentStep < 3) {
+  setCurrentStep(currentStep + 1)
+  }
+}
+
+const prevStep = () => {
+  if (currentStep > 1) {
+  setCurrentStep(currentStep - 1)
+  }
+}
 
 const currentStepsColor = (setNumber) => {  
   setCurrentStep(currentStep);
@@ -52,10 +65,10 @@ return (
       </p>
     </div>
 
-    <div class="border-t-2 mt-10 pt-10">
-    <div>
-
 {/* STEPS */}
+
+<div class="border-t-2 mt-10 pt-10">
+<div>
 
   <div className="steps">
   <h2 class="sr-only">Steps</h2>
@@ -83,7 +96,7 @@ return (
           2
         </span>
 
-        <span class="hidden sm:block"> Complexity </span>
+        <span class="hidden sm:block"> Functionality </span>
       </li>
 
       <li id={currentStep >= 3 ? 'active' : ''} class="flex items-center gap-2 bg-white p-2">
@@ -105,10 +118,10 @@ return (
 
 {/* Prices and Options */}
 
-<div>
+<div className="prices">
       <ul>
-        <li>
-          <h2>Step 1</h2>
+        <li id={currentStep === 1 ? 'active' : ''} class='hidden'>
+          <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">General Information</h2>
           <label>
             Option 1 ($10)
             <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 10)} />
@@ -118,8 +131,8 @@ return (
             <input type="checkbox" checked={selectedOptions.step1.option2} onChange={() => handleDevelopmentOption('step1', 'option2', 20)} />
           </label>
         </li>
-        <li>
-          <h2>Step 2</h2>
+         <li id={currentStep === 2 ? 'active' : ''} class='hidden'>
+          <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">Functionality</h2>
           <label>
             Option 1 ($15)
             <input type="checkbox" checked={selectedOptions.step2.option1} onChange={() => handleDevelopmentOption('step2', 'option1', 15)} />
@@ -129,8 +142,8 @@ return (
             <input type="checkbox" checked={selectedOptions.step2.option2} onChange={() => handleDevelopmentOption('step2', 'option2', 25)} />
           </label>
         </li>
-        <li>
-          <h2>Step 3</h2>
+         <li id={currentStep === 3 ? 'active' : ''} class='hidden'>
+          <h2 class="flex justify-center text-3xl font-bold text-gray-800 sm:text-4xl mt-6">Pages</h2>
           <label>
             Option 1 ($5)
             <input type="checkbox" checked={selectedOptions.step3.option1} onChange={() => handleDesignOption('step3', 'option1', 5)} />
@@ -182,6 +195,12 @@ return (
     </div>
   </div>
 </div>
+<button onClick={prevStep}>
+  Previous
+</button>
+<button onClick={nextStep}>
+  Next
+</button>
 </section>
 </>
     );
