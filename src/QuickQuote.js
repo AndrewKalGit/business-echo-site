@@ -72,14 +72,23 @@ const currentStepsColor = (setNumber) => {
 // You need better code variable names
   // setDes is the setTotalDesignQuote
   // des is the integer: total amount of cost that goes into the des quote
- function handleNumberInput(event) {
-    const productName = event.target.name;
-    const quantity = Number(event.target.value);
-    const price = inputAmount[productName];
-    const newTotal = des + (price * quantity);
+function handleNumberInput(event) {
+  const productName = event.target.name;
+  const newQuantity = Number(event.target.value);
+  const oldQuantity = Number(event.target.dataset.oldValue) || 0;
+  const price = Math.abs(inputAmount[productName]);
 
-    setDes(newTotal);
-  }
+  // Calculate the difference between the new and old quantities
+  const diff = newQuantity - oldQuantity;
+
+  // Calculate the new total based on the price and the quantity difference
+  const newTotal = des + (price * diff);
+
+  // Set the new total and update the old quantity in the dataset
+  setDes(newTotal);
+  event.target.dataset.oldValue = newQuantity;
+}
+
 
 
 
