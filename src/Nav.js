@@ -40,7 +40,7 @@ setHidden(false);
         <div
           class="text-gray-600 hover:text-gray-400 font-medium inline-flex items-center"
         >
-          <span class="mr-1">Services</span>
+          <Link to="/design" class="mr-1">Services</Link>
           <svg
             class="fill-current h-4 w-4"
             xmlns="http://www.w3.org/2000/svg"
@@ -55,19 +55,19 @@ setHidden(false);
           <li class="border-b border-solid border-gray-100">
             <Link
               class="hover:text-gray-400 py-2 px-4 block"
-              to="#"
+              to="design"
               >Design</Link>
           </li>
           <li class="border-b border-solid border-gray-100">
             <Link
               class="hover:text-gray-400 py-2 px-4 block"
-              to="#"
+              to="development"
               >Development</Link>
           </li>
           <li class="hover:text-gray-400 border-b border-solid border-gray-100">
             <Link
               class="rounded-b py-2 px-4 block"
-              to="#"
+              to="maintenance"
               >Maintenance</Link>
           </li>
         </ul>
@@ -116,17 +116,17 @@ setHidden(false);
 						<Link className='Nav-Links-Hambuger' to='/about'>
 							About
 						</Link>
-            <div className='Nav-Links-Hambuger'>
+            <Link to="/design" className='Nav-Links-Hambuger'>
               Services
-						</div>
+						</Link>
             <ul class="w-full text-end mr-4">
-              <Link to="/devlopment" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
+              <Link to="/design" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
                 Design
               </Link>
-              <Link to="/devlopment" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
+              <Link to="/development" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
                 Development
               </Link>
-             <Link to="/devlopment" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
+             <Link to="/maintenance" class="hover:text-gray-400 py-2 px-4 block border-b border-solid border-gray-100">
                 Maintenance
               </Link>
             </ul>

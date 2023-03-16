@@ -6,6 +6,7 @@ import Nav from './Nav';
 import Brochure from './Brochure';
 import QuickQuote from './QuickQuote';
 import Error from './Error';
+import About from './About';
 
 function App() {
 //SEO
@@ -24,6 +25,7 @@ function App() {
     <Routes>
     <Route path="/" element={<><Landing></Landing><Brochure></Brochure></>}></Route>
     <Route path="/quickquote" element={<><QuickQuote></QuickQuote></>}></Route>
+    <Route path="/about" element={<><About></About></>}></Route>
     <Route path="/404" element={<><Error></Error></>}></Route>
     </Routes>
     <Footer></Footer>

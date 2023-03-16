@@ -89,10 +89,6 @@ function handleNumberInput(event) {
   event.target.dataset.oldValue = newQuantity;
 }
 
-
-
-
-
 return (
 <>
 <section class="bg-white">
@@ -168,7 +164,7 @@ return (
           <h3 class="flex justify-start text-3xl font-bold text-gray-800">
             Standard 
           </h3>
-          <label class="flex justify-start text-xl mt-4 text-gray-800">
+          <label class="flex justify-start text-md sm:text-xl mt-4 text-gray-800">
             Contact Form ($100)&nbsp;
             <input type="checkbox" checked={selectedOptions.step1.option1} onChange={() => handleDevelopmentOption('step1', 'option1', 100)} />
           </label> 

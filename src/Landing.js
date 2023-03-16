@@ -9,7 +9,7 @@ function Landing(props) {
 //resize 3d object for mobile
 //Make a ring that follows the mouse in echo 3d logo
 
-  const headingStatement = ['Make Some Noise', 'Create a Scene', 'Be You'];
+  const headingStatement = ['3D Websites', 'Custom', 'Scalability'];
 
     const [index, setIndex] = useState(0)
 
@@ -21,29 +21,30 @@ function Landing(props) {
             if (index === headingStatement.length - 1){
                 setIndex(index - headingStatement.length + 1)
             }
-        }, 3000);
+        }, 4500);
         return () => clearInterval(intervalID);
     },); 
 return (
 
 <>
 <section
-  class="relative bg-gradient-to-r from-blue-200 bg-cover bg-center bg-no-repeat"
+  class="relative bg-gradient-to-r from-blue-300 to-indigo-300 bg-cover bg-center bg-no-repeat opacity-70"
 >
   <div
     class="relative flex mx-auto px-4 py-32 sm:px-6 lg:flex justify-center lg:h-screen items-center lg:px-8"
   >
     <div class="text-center">
-      <h1 class="text-4xl text-gray-700 font-extrabold sm:text-6xl">
-        <span id="fade-in">
-        {headingStatement[index]}
-        </span>
-        <span id="fade-in2">
-        <strong class="block font-extrabold text-gray-900">
-        Echo Web
-        </strong>
+       <h1>
+        <span id="fade-in2" class="text-4xl text-white font-extrabold sm:text-6xl block mb-2 rounded-md opacity-90">
+        Echo Web LLC
         </span>
       </h1>
+      <h2 class="text-4xl text-white font-extrabold sm:text-6xl">
+        <span id="fade-in" class="rounded-lg p-1 opacity-90">
+        {headingStatement[index]}
+        </span>
+      </h2>
+    
 
       <div class="mt-8 flex justify-center flex-wrap gap-4 text-center">
         <Link
@@ -57,7 +58,7 @@ return (
         id="fade-in2"
         to="/#brochure"
         smooth
-        class="lg:block w-64 rounded bg-white px-12 py-3 text-md font-semibold text-blue-400 shadow hover:bg-blue-400 focus:outline-none focus:ring active:bg-white sm:w-auto hover:text-blue-500 hidden"
+        class="lg:block w-64 rounded bg-white px-12 py-3 text-md font-semibold text-blue-400 shadow hover:bg-blue-400 focus:outline-none focus:ring active:bg-white hover:text-white sm:w-auto hidden"
         >
          Learn More
         </HashLink>
