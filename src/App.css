@@ -87,6 +87,7 @@ body {
 
 .Nav-Links-Hambuger:active {
   opacity: 0.75;
+  z-index: 20;
 }
 
 .Nav-Links-Hambuger:hover {
@@ -94,12 +95,26 @@ body {
 }
 
 #canvas {
-  height: 700px;
-  width: 400px;
+  height: 300px;
+  width: 280px;
 }
 
 
 /* MEDIA(S) Queries */
+
+@media screen and (min-width: 325px) {
+  #canvas {
+    height: 400px;
+    width: 375px;
+  }
+}
+
+@media screen and (min-width: 625px) {
+  #canvas {
+    height: 700px;
+    width: 350px;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   #canvas {

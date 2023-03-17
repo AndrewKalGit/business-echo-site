@@ -64,7 +64,7 @@ return (
         </HashLink>
       </div>
     </div>
-    <div class="absolute -z-10">
+    <div class="absolute -z-20">
       <div id="canvas">
       <Banner3D></Banner3D>
       </div>

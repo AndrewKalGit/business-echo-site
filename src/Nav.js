@@ -85,7 +85,7 @@ setHidden(false);
         </Link>
     </div>
       <div class="lg:hidden">
-        <button class="rounded-lg p-2 text-gray-800" type="button" onClick={close}>
+        <button class="rounded-lg z-20 p-2 text-gray-800" type="button" onClick={close}>
           <span class="sr-only">Open menu</span>
           <svg
             aria-hidden="true"
