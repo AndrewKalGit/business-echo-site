@@ -73,7 +73,7 @@ setHidden(false);
         </ul>
       </div>
         <Link class="text-gray-600 hover:text-gray-400" to="portfolio">Portfolio</Link>
-        <Link class="text-gray-600 hover:text-gray-400" to="consult">Consult</Link>
+        <Link class="text-gray-600 hover:text-gray-400" to="contact">Contact</Link>
       </nav>
 
      <div class="w-full lg:w-auto items-center lg:justify-end gap-4 justify-center hidden lg:flex">
@@ -130,11 +130,11 @@ setHidden(false);
                 Maintenance
               </Link>
             </ul>
-            <Link id="border-top" className='Nav-Links-Hambuger' to='/schedule'>
+            <Link id="border-top" className='Nav-Links-Hambuger' to='/portfolio'>
 							Portfolio
 						</Link>
-            <Link className='Nav-Links-Hambuger' to='/schedule'>
-							Consult
+            <Link className='Nav-Links-Hambuger' to='/contact'>
+							Contact
 						</Link>
             <Link className='Nav-Links-Hambuger' to='/quickquote'>
 							Quick Quotes

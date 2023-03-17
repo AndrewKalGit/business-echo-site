@@ -17,7 +17,7 @@ function Footer(props) {
         href="/consult"
         class="inline-block px-12 py-3 mt-8 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500"
       >
-        Consult
+        Contact Us
       </a>
     </div>
 
@@ -27,19 +27,19 @@ function Footer(props) {
       <nav aria-label="Footer Navigation - Support">
         <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
           <li>
-            <a href="terms-conditions" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="terms-conditions" class="text-gray-500 transition hover:opacity-75">
               Terms & Conditions
             </a>
           </li>
 
           <li>
-            <a href="privacy-policy" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="privacy-policy" class="text-gray-500 transition hover:opacity-75">
               Privacy Policy
             </a>
           </li>
 
           <li>
-            <a href="cookies" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="cookies" class="text-gray-500 transition hover:opacity-75">
               Cookies
             </a>
           </li>
