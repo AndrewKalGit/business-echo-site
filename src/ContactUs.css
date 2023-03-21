@@ -1,0 +1,11 @@
+.ContactConfirm {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: #3B82F6;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 0.5rem;
+}

@@ -7,7 +7,7 @@ import Brochure from './Brochure';
 import QuickQuote from './QuickQuote';
 import Error from './Error';
 import About from './About';
-import Contact from './Contact';
+import ContactUs from './ContactUs';
 
 function App() {
 //SEO
@@ -27,7 +27,7 @@ function App() {
     <Route path="/" element={<><Landing></Landing><Brochure></Brochure></>}></Route>
     <Route path="/quickquote" element={<><QuickQuote></QuickQuote></>}></Route>
     <Route path="/about" element={<><About></About></>}></Route>
-    <Route path="/contact" element={<><Contact></Contact></>}></Route>
+    <Route path="/contact" element={<><ContactUs></ContactUs></>}></Route>
     <Route path="/404" element={<><Error></Error></>}></Route>
     </Routes>
     <Footer></Footer>

@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import "./ContactUs.css";
 
-function Contact(props) {
+//TODO:
+//Make sure it changes to sent onsubmit only!
+
+export const ContactUs = () => {
+
+const [emailSent, setEmailSent] = useState(false);
+
+const sent = () => {
+  setEmailSent(!emailSent);
+}
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_iyih0jt', 'template_9mcw1oi', form.current, 'pWK-1B7t6ZNPqH79e')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
     return (
 <div class="py-4 lg:py-24">
 <h1>
@@ -15,7 +40,7 @@ function Contact(props) {
         </p>
 
         <div class="mt-8">
-          <a href="" class="text-2xl font-bold text-blue-500">
+          <a href="tel:732-515-8724" class="text-2xl font-bold text-blue-500">
             (+1) 732-515-8724
           </a>
 
@@ -26,14 +51,17 @@ function Contact(props) {
       </div>
 
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <form action="" class="space-y-4">
+        <form ref={form} onSubmit={sendEmail} class="space-y-4">
           <div>
-            <label class="sr-only" for="name">Name</label>
+            <label class="sr-only" for="Name">Name</label>
             <input
               class="w-full rounded-lg border-gray-200 p-3 text-sm"
+              pattern='^[A-Za-z]+(?:\s[A-Za-z]+)*$'
               placeholder="Name"
               type="text"
               id="name"
+              name="from_name"
+              required
             />
           </div>
 
@@ -45,6 +73,9 @@ function Contact(props) {
                 placeholder="Email address"
                 type="email"
                 id="email"
+                pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
+                name="reply_to_email"
+                required
               />
             </div>
 
@@ -55,6 +86,9 @@ function Contact(props) {
                 placeholder="Phone Number"
                 type="tel"
                 id="phone"
+                pattern='^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$'
+                name="reply_to_number"
+                required
               />
             </div>
           </div>
@@ -67,15 +101,17 @@ function Contact(props) {
               placeholder="Message"
               rows="8"
               id="message"
+              name="message"
             ></textarea>
           </div>
 
           <div class="mt-4">
             <button
               type="submit"
-              class="inline-block w-full rounded-lg bg-blue-500 px-5 py-3 font-medium text-white sm:w-auto"
             >
-              Send
+              <span onSubmit={sent} className="ContactConfirm">
+                {emailSent ? 'Sent' : 'Confirm'}
+              </span>
             </button>
           </div>
         </form>
@@ -85,6 +121,6 @@ function Contact(props) {
 </section>
 </div>
     );
-}
+};
 
-export default Contact;
+export default ContactUs;
