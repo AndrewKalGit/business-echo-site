@@ -8,6 +8,8 @@ import QuickQuote from './QuickQuote';
 import Error from './Error';
 import About from './About';
 import ContactUs from './ContactUs';
+import { PagebloxDndProvider } from 'pageblox-react'
+import 'pageblox-react/dist/index.css'
 
 function App() {
 //SEO
@@ -21,6 +23,7 @@ function App() {
 //ERROR PAGES
   return (
     <>
+    <PagebloxDndProvider clientId="playgroundKey">
     <BrowserRouter>
     <Nav></Nav>
     <Routes>
@@ -32,6 +35,7 @@ function App() {
     </Routes>
     <Footer></Footer>
     </BrowserRouter>
+    </PagebloxDndProvider>
     </>
   );
 }

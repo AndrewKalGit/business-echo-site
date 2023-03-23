@@ -2,9 +2,6 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import "./ContactUs.css";
 
-//TODO:
-//Make sure it changes to sent onsubmit only!
-
 export const ContactUs = () => {
 
 const [emailSent, setEmailSent] = useState(false);
