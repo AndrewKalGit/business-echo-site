@@ -28,12 +28,12 @@ function Banner3D(props) {
                 <pointLight position={[-10, 0, -20]} color="white" intensity={1} />
                 <pointLight position={[0, 10, 0]} intensity={1} />
                   <Float speed={1} intensity={1.5} rotationIntensity={2}>
-                    <Line worldUnits points={points} color="blue" lineWidth={0.3} rotation={[-1, -1, 0]} />
+                    <Line worldUnits points={points} color="white" lineWidth={0.3} rotation={[-1, -1, 0]} />
                  <Sphere
                     castShadow scale={1}
                     >
                     <sphereGeometry />
-                    <meshStandardMaterial color="cornflowerblue" toneMapped="false" />
+                    <meshStandardMaterial color="white" toneMapped="false" />
                  </Sphere>
                  </Float>      
                     {/* <EffectComposer>
