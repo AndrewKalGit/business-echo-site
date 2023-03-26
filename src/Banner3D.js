@@ -20,7 +20,7 @@ function Banner3D(props) {
 
     return (
         <Canvas shadows id="fade-in2" camera={{position: [0, 0, 10], fov: 60 }}>
-                <fog attach="fog" args={["blue", 0, 40]} />
+                <fog attach="fog" args={["white", 0, 40]} />
                 <ambientLight intensity={.5} />
                 <directionalLight castShadow position={[2, 8, 5]} intensity={1.5} shadow-mapSize={1024}>
                     <orthographicCamera attach="shadow-camera" args={[-10, 10, -10, 10, 0.1, 50]} />
