@@ -28,7 +28,7 @@ return (
 
 <>
 <section
-  class="relative bg-gradient-to-r from-blue-300 to-indigo-300 bg-cover bg-center bg-no-repeat opacity-70"
+  class="relative bg-black bg-center bg-no-repeat opacity-70"
 >
   <div
     class="relative flex mx-auto px-4 py-32 sm:px-6 lg:flex justify-center lg:h-screen items-center lg:px-8"
