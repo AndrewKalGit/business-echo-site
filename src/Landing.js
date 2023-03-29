@@ -28,12 +28,12 @@ return (
 
 <>
 <section
-  class="bg-black bg-center bg-no-repeat w-screen h-screen grid grid-cols-1 md:grid-cols-2">
+  class="bg-black bg-center bg-no-repeat w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
   <div>
   <Banner3D></Banner3D>
   </div>
   <div class="bg-black">
-  <h1 class="hidden text-blue-600 h-5/6 md:mr-52 md:flex justify-center items-center font-bold text-7xl text-center">
+  <h1 class="hidden text-blue-600 h-5/6 lg:mt-8 lg:mr-52 lg:flex justify-center justify-items-center items-center font-bold text-7xl text-center">
   {headingStatement[index]}
 </h1>
 </div>
