@@ -28,7 +28,7 @@ return (
 
 <>
 <section
-  class="bg-black bg-center bg-no-repeat w-screen h-screen grid grid-cols-2">
+  class="bg-black bg-center bg-no-repeat w-screen h-screen grid grid-cols-1 md:grid-cols-2">
   <div>
   <Banner3D></Banner3D>
   </div>
