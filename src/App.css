@@ -94,14 +94,14 @@ body {
   opacity: 0.75;
 }
 
-#canvas {
-  height: 300px;
-  width: 280px;
-}
+/* #canvas {
+  height: max-content;
+  width: max-content;
+} */
 
 
 /* MEDIA(S) Queries */
-
+/* 
 @media screen and (min-width: 325px) {
   #canvas {
     height: 400px;
@@ -121,4 +121,4 @@ body {
     height: 1200px;
     width: 700px;
   }
-}
+} */

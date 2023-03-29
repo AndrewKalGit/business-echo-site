@@ -21,12 +21,12 @@ onOutsideClick={() => {
 setHidden(false);
 }}>
 <header id="Nav-Overflow" aria-label="Site Header" class="shadow-sm">
-  <div class="mx-auto max-w-screen p-4 bg-white border-b border-solid border-gray-100">
+  <div class="mx-auto max-w-screen p-4 bg-black">
     <div class="flex items-center justify-between gap-4 lg:gap-10">
       <div class="flex lg:w-0 lg:flex-1">
         <Link to="/">
           <span class="sr-only">Logo</span>
-          <img src={Logo} alt="logo" class="w-12 bg-black rounded-full"/>
+          <img src={Logo} alt="logo" class="w-12"/>
         </Link>
       </div>
 
@@ -34,11 +34,11 @@ setHidden(false);
         aria-label="Site Nav"
         class="hidden gap-12 text-lg font-medium lg:flex"
       >
-        <Link class="text-gray-600 hover:text-gray-400" to="/">Home</Link>
-        <Link class="text-gray-600 hover:text-gray-400" to="about">About</Link>
+        <Link class="text-gray-300 hover:text-gray-200" to="/">Home</Link>
+        <Link class="text-gray-300 hover:text-gray-200" to="about">About</Link>
         <div class="group inline-block relative">
         <div
-          class="text-gray-600 hover:text-gray-400 font-medium inline-flex items-center"
+          class="text-gray-300 hover:text-gray-400 font-medium inline-flex items-center"
         >
           <Link to="/design" class="mr-1">Services</Link>
           <svg
@@ -72,20 +72,20 @@ setHidden(false);
           </li>
         </ul>
       </div>
-        <Link class="text-gray-600 hover:text-gray-400" to="portfolio">Portfolio</Link>
-        <Link class="text-gray-600 hover:text-gray-400" to="contact">Contact</Link>
+        <Link class="text-gray-300 hover:text-gray-200" to="portfolio">Portfolio</Link>
+        <Link class="text-gray-300 hover:text-gray-200" to="contact">Contact</Link>
       </nav>
 
      <div class="w-full lg:w-auto items-center lg:justify-end gap-4 justify-center hidden lg:flex">
         <Link
-          class="px-5 text-lg font-semibold text-blue-500 border border-blue-600 rounded-lg hover:bg-blue-500 hover:text-white focus:outline-none focus:ring active:bg-blue-500 p-2"
+          class="px-5 text-lg font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white focus:outline-none focus:ring active:bg-blue-600 p-2"
           to="quickquote"
         >
             Quick Quote
         </Link>
     </div>
       <div class="lg:hidden">
-        <button class="rounded-lg z-20 p-2 text-gray-800" type="button" onClick={close}>
+        <button class="rounded-lg z-20 p-2 text-gray-400" type="button" onClick={close}>
           <span class="sr-only">Open menu</span>
           <svg
             aria-hidden="true"

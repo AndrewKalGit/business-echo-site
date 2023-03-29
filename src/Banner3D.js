@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import React, { useMemo, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stage, Float, Line, Sphere, Trail, Sparkles } from '@react-three/drei';
+import { Stage, Float, Line, Sphere, Trail, Sparkles, OrbitControls } from '@react-three/drei';
 // import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
 //figure out a way to make this go behind the Landing.js
@@ -19,7 +19,7 @@ function Banner3D(props) {
     const points = useMemo(() => new THREE.EllipseCurve(-1.25, 0, 4, 2, 1.25, 2 * Math.PI, false, 0).getPoints(100), [])
 
     return (
-        <Canvas shadows id="fade-in2" camera={{position: [0, 0, 10], fov: 60 }}>
+        <Canvas shadows id="fade-in2" camera={{position: [3, 3, 3], fov: 60 }}>
                 <fog attach="fog" args={["white", 0, 40]} />
                 <ambientLight intensity={.5} />
                 <directionalLight castShadow position={[2, 8, 5]} intensity={1.5} shadow-mapSize={1024}>
@@ -39,6 +39,7 @@ function Banner3D(props) {
                     {/* <EffectComposer>
                     <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
                 </EffectComposer> */}
+                <OrbitControls></OrbitControls>
         </Canvas>
     );
 }
