@@ -32,8 +32,8 @@ return (
   <div>
   <Banner3D></Banner3D>
   </div>
-  <div>
-  <h1 class="text-blue-600 absolute h-5/6 flex justify-center items-center font-bold text-7xl text-center">
+  <div class="bg-black">
+  <h1 class="hidden text-blue-600 h-5/6 md:mr-52 md:flex justify-center items-center font-bold text-7xl text-center">
   {headingStatement[index]}
 </h1>
 </div>

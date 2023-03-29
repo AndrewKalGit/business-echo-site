@@ -39,7 +39,7 @@ function Banner3D(props) {
                     {/* <EffectComposer>
                     <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
                 </EffectComposer> */}
-                <OrbitControls></OrbitControls>
+                <OrbitControls zoomSpeed={0}></OrbitControls>
         </Canvas>
     );
 }

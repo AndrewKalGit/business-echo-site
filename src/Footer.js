@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer(props) {
     return (
-<footer aria-label="Site Footer" class="bg-white border-t border-gray-100">
-  <div class="max-w-screen-xl px-4 pt-8 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-16">
+<footer aria-label="Site Footer" class="flex justify-center border-gray-100 mt-4">
+  <div class="max-w-screen-xl pt-4">
     <div class="text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
         Our Expertise 

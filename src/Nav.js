@@ -26,7 +26,7 @@ setHidden(false);
       <div class="flex lg:w-0 lg:flex-1">
         <Link to="/">
           <span class="sr-only">Logo</span>
-          <img src={Logo} alt="logo" class="w-12"/>
+          <img src={Logo} alt="logo" class="w-16"/>
         </Link>
       </div>
 
