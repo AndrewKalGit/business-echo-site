@@ -2,14 +2,14 @@ import React from 'react';
 
 function Footer(props) {
     return (
-<footer aria-label="Site Footer" class="flex justify-center border-gray-100 mt-4">
-  <div class="max-w-screen-xl pt-4">
+<footer aria-label="Site Footer" class="flex justify-center border-gray-100 bg-black">
+  <div class="max-w-screen-xl">
     <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
+      <h2 class="text-3xl font-extrabold text-white sm:text-5xl">
         Our Expertise 
       </h2>
 
-      <p class="max-w-sm mx-auto mt-4 text-gray-500">
+      <p class="max-w-sm mx-auto mt-4 text-gray-50">
         We design and develop a great user experience and interface for your organizational needs.  
       </p>
 

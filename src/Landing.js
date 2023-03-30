@@ -1,7 +1,5 @@
 import { React, useState, useEffect } from 'react';
 import './Fadein.css';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import Banner3D from './Banner3D';
 
 function Landing(props) {
@@ -9,7 +7,7 @@ function Landing(props) {
 //resize 3d object for mobile
 //Make a ring that follows the mouse in echo 3d logo
 
-  const headingStatement = ['3D Websites', 'Scalability', '... Custom'];
+  const headingStatement = ['3D Websites', 'Scalability', 'Custom'];
 
     const [index, setIndex] = useState(0)
 
@@ -33,7 +31,7 @@ return (
   <Banner3D></Banner3D>
   </div>
   <div class="bg-black">
-  <h1 class="hidden text-blue-600 h-5/6 lg:mt-8 lg:mr-52 lg:flex justify-center justify-items-center items-center font-bold text-7xl text-center">
+  <h1 class="hidden text-blue-600 h-5/6 lg:flex justify-center justify-items-center items-center font-bold text-7xl text-center">
   {headingStatement[index]}
 </h1>
 </div>
