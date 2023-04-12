@@ -26,15 +26,15 @@ return (
 
 <>
 <section
-  class="bg-black bg-center bg-no-repeat w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
+  class="bg-white bg-center bg-no-repeat w-screen h-screen grid grid-cols-1">
   <div>
   <Banner3D></Banner3D>
   </div>
-  <div class="bg-black">
+  {/* <div class="bg-black">
   <h1 class="hidden text-blue-600 h-5/6 lg:flex justify-center justify-items-center items-center font-bold text-7xl text-center">
   {headingStatement[index]}
 </h1>
-</div>
+</div> */}
 </section>
 </>
     );

@@ -2,14 +2,14 @@ import React from 'react';
 
 function Footer(props) {
     return (
-<footer aria-label="Site Footer" class="flex justify-center border-gray-100 bg-black">
-  <div class="max-w-screen-xl">
+<footer aria-label="Site Footer" class="flex justify-center bg-white">
+  <div>
     <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-white sm:text-5xl">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl">
         Our Expertise 
       </h2>
 
-      <p class="max-w-sm mx-auto mt-4 text-gray-50">
+      <p class="max-w-sm mx-auto mt-4 text-gray-900">
         We design and develop a great user experience and interface for your organizational needs.  
       </p>
 
@@ -22,24 +22,24 @@ function Footer(props) {
     </div>
 
     <div
-      class="pt-8 mt-16 border-t border-gray-100 sm:flex sm:items-center sm:justify-between lg:mt-24"
+      class="p-4 mt-8 border-t min-w-full border-gray-900 sm:flex sm:items-center sm:justify-between lg:mt-12"
     >
       <nav aria-label="Footer Navigation - Support">
         <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
           <li>
-            <a target="_blank" href="terms-conditions" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="terms-conditions" class="text-gray-700 transition hover:opacity-75">
               Terms & Conditions
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="privacy-policy" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="privacy-policy" class="text-gray-700 transition hover:opacity-75">
               Privacy Policy
             </a>
           </li>
 
           <li>
-            <a target="_blank" href="cookies" class="text-gray-500 transition hover:opacity-75">
+            <a target="_blank" href="cookies" class="text-gray-700 transition hover:opacity-75">
               Cookies
             </a>
           </li>

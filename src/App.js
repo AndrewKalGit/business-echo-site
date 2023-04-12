@@ -9,7 +9,6 @@ import Error from './Error';
 import About from './About';
 import ContactUs from './ContactUs';
 import { PagebloxDndProvider } from 'pageblox-react'
-import 'pageblox-react/dist/index.css'
 
 function App() {
 //SEO

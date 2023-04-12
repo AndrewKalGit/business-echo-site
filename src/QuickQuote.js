@@ -292,7 +292,7 @@ return (
     <div class="mt-8 sm:mt-12">
       <dl class="grid grid-cols-3 gap-4">
         <div
-          class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
+          class="flex flex-col rounded-lg border border-gray-300 px-4 py-8 text-center"
         >
           <dt class="order-last text-lg font-medium text-gray-500">
             Total
@@ -304,7 +304,7 @@ return (
         </div>
 
         <div
-          class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
+          class="flex flex-col rounded-lg border border-gray-300 px-4 py-8 text-center"
         >
           <dt class="order-last text-lg font-medium text-gray-500">
             Develop
@@ -314,7 +314,7 @@ return (
         </div>
 
         <div
-          class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
+          class="flex flex-col rounded-lg border border-gray-300 px-4 py-8 text-center"
         >
           <dt class="order-last text-lg font-medium text-gray-500">
             Design
@@ -325,42 +325,6 @@ return (
       </dl>
     </div>
   </div>
-</div>
-<div class="flex justify-center gap-1 mb-5">
-  <button
-    class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-200" onClick={prevStep}
-  >
-    <span class="sr-only">Prev Step</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-3 w-3"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-        clip-rule="evenodd"
-      />
-    </svg>
-  </button>
-    <button
-    class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-200" onClick={nextStep}
-  >
-    <span class="sr-only">Next Step</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-3 w-3"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-        clip-rule="evenodd"
-      />
-    </svg>
-    </button>
 </div>
 </section>
 </>
